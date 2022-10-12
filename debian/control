@@ -1,0 +1,59 @@
+Source: libwpg
+Priority: optional
+Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
+Uploaders: Rene Engelhard <rene@debian.org>
+Build-Depends: debhelper (>= 10), libwpd-dev (>= 0.10), librevenge-dev, pkg-config, dh-autoreconf
+Build-Depends-Indep: doxygen
+Build-Conflicts: automake1.9
+Standards-Version: 3.7.2
+Section: libs
+
+Package: libwpg-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libwpg-0.3-3 (= ${binary:Version}), libwpd-dev (>= 0.10), librevenge-dev, ${misc:Depends}
+Description: WordPerfect graphics import/convert library (development)
+ Libwpg is a collection of library and tools to work with graphics in WPG
+ (WordPerfect Graphics) format. WPG is the format used among others in Corel
+ software, such as WordPerfect(tm) and Presentations(tm).
+ .
+ This package contains the files needed for developing applications using
+ libwpg.
+
+Package: libwpg-0.3-3
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description:  WordPerfect graphics import/convert library (shared library)
+ Libwpg is a collection of library and tools to work with graphics in WPG
+ (WordPerfect Graphics) format. WPG is the format used among others in Corel
+ software, such as WordPerfect(tm) and Presentations(tm).
+ .
+ This package contains the shared library.
+
+Package: libwpg-tools
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Tools from libwpg for converting WP Graphics to Raw/SVG
+ Libwpg is a collection of library and tools to work with graphics in WPG
+ (WordPerfect Graphics) format. WPG is the format used among others in Corel
+ software, such as WordPerfect(tm) and Presentations(tm).
+ .
+ This package contains some little programs using libwps to convert
+ WordPerfect Graphics into Raw and SVG files.
+
+Package: libwpg-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: WordPerfect graphics import/convert library (documentation) 
+ Libwpg is a collection of library and tools to work with graphics in WPG
+ (WordPerfect Graphics) format. WPG is the format used among others in Corel
+ software, such as WordPerfect(tm) and Presentations(tm).
+ .
+ This package contains the API documentation.
+
